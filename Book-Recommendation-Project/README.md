@@ -1,11 +1,3 @@
-# Machine Learning Projects
-
-This repository contains machine learning projects organized by folder.
-
-## Projects
-
-- [`Book-Recommendation-Project`](./Book-Recommendation-Project): Hybrid book recommendation system with FastAPI backend, engagement-aware collaborative filtering, trending endpoint, and a lightweight frontend.
-
 # Book Recommendation API
 
 A production-style FastAPI service for personalized book recommendations using a hybrid approach:
@@ -75,6 +67,7 @@ Core goals:
 ### 2) Install dependencies
 
 ```bash
+cd Book-Recommendation-Project
 pip install -r requirements.txt
 ```
 
@@ -183,7 +176,7 @@ Returns top 10 most popular books based on rating count from the processed dataf
 ## Project Structure
 
 ```text
-book-recommender/
+Book-Recommendation-Project/
 ├── api/
 │   └── main.py                  # FastAPI app and endpoints
 ├── data/
