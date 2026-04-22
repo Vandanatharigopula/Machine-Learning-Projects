@@ -32,8 +32,32 @@ body {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
+.narrow-card {
+  max-width: 480px;
+}
+
 .card h2 {
   margin-top: 0;
+}
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.auth-form h3 {
+  margin: 0 0 4px 0;
 }
 
 .card-head {
@@ -58,6 +82,13 @@ input {
   padding: 8px 10px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
+}
+
+select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
 }
 
 button {
@@ -90,4 +121,13 @@ button:hover {
 .book-meta {
   color: #6b7280;
   font-size: 0.92rem;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

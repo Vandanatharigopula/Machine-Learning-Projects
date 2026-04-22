@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup - Book Recommendation</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Signup</h1>
+      <p>Create your account to access the recommendation app.</p>
+    </header>
+
+    <section class="card narrow-card">
+      <form id="signup-form" class="auth-form">
+        <label for="signup-username">Username</label>
+        <input id="signup-username" type="text" placeholder="yourname" required />
+        <label for="signup-password">Password</label>
+        <input id="signup-password" type="password" placeholder="minimum 6 chars" required />
+        <label for="signup-interests">Area of Interest</label>
+        <select id="signup-interests" multiple size="10">
+          <option>Fiction</option>
+          <option>Fantasy</option>
+          <option>Science Fiction</option>
+          <option>Mystery / Thriller</option>
+          <option>Romance</option>
+          <option>Historical Fiction</option>
+          <option>Biography / Autobiography</option>
+          <option>Self-help</option>
+          <option>Business / Finance</option>
+          <option>Psychology</option>
+          <option>Education</option>
+          <option>Children's books</option>
+          <option>Young Adult (YA)</option>
+          <option>Comics / Graphic novels</option>
+          <option>Philosophy</option>
+          <option>Technology</option>
+          <option>Health & Fitness</option>
+          <option>Spiritual</option>
+        </select>
+        <p class="status">Tip: hold Ctrl (Windows) / Cmd (Mac) to select multiple genres.</p>
+        <button type="submit">Create Account</button>
+      </form>
+      <p id="signup-status" class="status"></p>
+      <p class="status">Already have an account? <a href="/login">Login</a>.</p>
+    </section>
+  </main>
+
+  <script src="/static/signup.js"></script>
+</body>
+</html>

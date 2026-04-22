@@ -11,38 +11,18 @@
     <header class="header">
       <h1>Book Recommendation App</h1>
       <p>Get personalized recommendations and view trending books.</p>
-    </header>
-
-    <section class="card">
-      <h2>Login / Signup</h2>
-      <p id="auth-status" class="status"></p>
-      <div class="auth-grid">
-        <form id="signup-form" class="auth-form">
-          <h3>Signup</h3>
-          <label for="signup-username">Username</label>
-          <input id="signup-username" type="text" placeholder="yourname" required />
-          <label for="signup-password">Password</label>
-          <input id="signup-password" type="password" placeholder="minimum 6 chars" required />
-          <button type="submit">Create Account</button>
-        </form>
-
-        <form id="login-form" class="auth-form">
-          <h3>Login</h3>
-          <label for="login-username">Username</label>
-          <input id="login-username" type="text" placeholder="yourname" required />
-          <label for="login-password">Password</label>
-          <input id="login-password" type="password" placeholder="your password" required />
-          <button type="submit">Login</button>
-        </form>
-      </div>
       <p id="auth-user" class="status"></p>
-    </section>
+      <div class="form-row">
+        <button id="logout-btn" type="button">Logout</button>
+      </div>
+    </header>
 
     <section class="card">
       <h2>Recommendations</h2>
       <form id="recommend-form" class="form-row">
         <label for="user-id">User ID</label>
         <input id="user-id" type="number" min="1" placeholder="e.g. 244" required />
+        <button id="use-my-id-btn" type="button">Use my logged-in user id</button>
         <button type="submit">Get Recommendations</button>
       </form>
       <p id="recommend-status" class="status"></p>

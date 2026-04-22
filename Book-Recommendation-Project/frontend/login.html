@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Book Recommendation</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Login</h1>
+      <p>Login to continue to the recommendation app.</p>
+    </header>
+
+    <section class="card narrow-card">
+      <form id="login-form" class="auth-form">
+        <label for="login-username">Username</label>
+        <input id="login-username" type="text" placeholder="yourname" required />
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="your password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="login-status" class="status"></p>
+      <p class="status">New here? <a href="/signup">Create an account</a>.</p>
+    </section>
+  </main>
+
+  <script src="/static/login.js"></script>
+</body>
+</html>
