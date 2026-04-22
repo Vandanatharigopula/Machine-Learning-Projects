@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Recommendation App</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Book Recommendation App</h1>
+      <p>Get personalized recommendations and view trending books.</p>
+    </header>
+
+    <section class="card">
+      <h2>Recommendations</h2>
+      <form id="recommend-form" class="form-row">
+        <label for="user-id">User ID</label>
+        <input id="user-id" type="number" min="1" placeholder="e.g. 244" required />
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <p id="recommend-status" class="status"></p>
+      <ul id="recommend-list" class="list"></ul>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Trending Books</h2>
+        <button id="refresh-trending" type="button">Refresh</button>
+      </div>
+      <p id="trending-status" class="status"></p>
+      <div id="trending-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
