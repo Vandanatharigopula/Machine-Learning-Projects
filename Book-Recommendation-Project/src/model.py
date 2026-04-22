@@ -119,7 +119,10 @@ def build_engagement_prediction_model(
 
 if __name__ == "__main__":
     # Local test run: load processed data and show quick verification outputs.
-    from data_processing import load_and_process_data
+    try:
+        from data_processing import load_and_process_data
+    except ImportError:
+        from src.data_processing import load_and_process_data
 
     df = load_and_process_data()
     if df is None or df.empty:

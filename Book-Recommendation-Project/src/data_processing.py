@@ -1,13 +1,28 @@
+from __future__ import annotations
+
 import pandas as pd
+from pathlib import Path
+
+
+def _resolve_data_csv(base: str, candidates: tuple[str, ...]) -> Path:
+    """Pick first existing CSV path (Linux is case-sensitive)."""
+    data_dir = Path("data")
+    for name in candidates:
+        path = data_dir / name
+        if path.is_file():
+            return path
+    raise FileNotFoundError(f"No file found for {base}; tried: {candidates}")
+
 
 def load_and_process_data(
     sample_size: int = 20000,
     min_book_ratings: int = 50,
 ):
     try:
-        # Load datasets
-        books = pd.read_csv("data/books.csv", sep=";", encoding="latin-1")
-        ratings = pd.read_csv("data/ratings.csv", sep=";", encoding="latin-1")
+        books_path = _resolve_data_csv("books", ("books.csv", "Books.csv"))
+        ratings_path = _resolve_data_csv("ratings", ("ratings.csv", "Ratings.csv"))
+        books = pd.read_csv(books_path, sep=";", encoding="latin-1")
+        ratings = pd.read_csv(ratings_path, sep=";", encoding="latin-1")
 
         # Rename columns based on YOUR dataset
         books = books.rename(columns={

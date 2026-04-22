@@ -105,6 +105,10 @@ python -m uvicorn api.main:app --reload
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
 
+### 6) Deploy on Amazon EC2
+
+Step-by-step guide (Docker + Nginx on Ubuntu): see [DEPLOY_EC2.md](./DEPLOY_EC2.md).
+
 ## API Endpoints
 
 ### `GET /`
